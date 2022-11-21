@@ -176,25 +176,55 @@
             }
         }));
 
-        struct tm {
+        var textAnimate = eval(Jscex.compile("async", function () {
 
- int tm _ sec ;/／秒
+180
 
- int tm _ min ; I ／分
+                    var together = new Date();
 
- int tm _ hour ;／时
+181
 
- int tm _ mday ;/／天
+                    together.setFullYear(2022,10, 6);                   //时间年月日
 
- int tm _ mon ; I ／月
+182
 
- int tm _ year ;/／年
+                    together.setHours(6);                                               //小时    
 
- int tm _ wday ; I ／星期几
+183
 
- int tm _ yday ;/1一年中的第几天 int tm _ isdst /／夏令时标识符
- 
-            };
+                    together.setMinutes(51);                                    //分钟
+
+184
+
+                    together.setSeconds(0);                                     //秒前一位
+
+185
+
+                    together.setMilliseconds(2);                                //秒第二位
+
+186
+
+
+
+187
+
+                    $("#code").show().typewriter();
+
+188
+
+            $("#clock-box").fadeIn(500);
+
+189
+
+            while (true) {
+
+190
+
+                timeElapse(together);
+
+191
+
+                $await(Jscex.Async.sleep(1000));   }));
 
         var runAsync = eval(Jscex.compile("async", function () {
             $await(seedAnimate());
