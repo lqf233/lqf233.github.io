@@ -178,51 +178,51 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
 
-180
+
 
                     var together = new Date();
 
-181
+
 
                     together.setFullYear(2022,10, 6);                   //时间年月日
 
-182
+
 
                     together.setHours(6);                                               //小时    
 
-183
+
 
                     together.setMinutes(51);                                    //分钟
 
-184
+
 
                     together.setSeconds(0);                                     //秒前一位
 
-185
+
 
                     together.setMilliseconds(2);                                //秒第二位
 
-186
 
 
 
-187
+
+
 
                     $("#code").show().typewriter();
 
-188
+
 
             $("#clock-box").fadeIn(500);
 
-189
+
 
             while (true) {
 
-190
+
 
                 timeElapse(together);
 
-191
+
 
                 $await(Jscex.Async.sleep(1000));   }));
 
